@@ -8,7 +8,7 @@ function App() {
       const { message } = await( await fetch(`/api/HttpTrigger1`)).json();
       setData(message);
     })();
-  });
+  }, []);
 
   return <div>{data}</div>;
 }
